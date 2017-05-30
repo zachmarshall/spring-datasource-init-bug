@@ -17,8 +17,8 @@ dependencyManagement {
 }
 
 dependencies {
-    compile 'org.springframework:spring-beans'
-    compile 'org.springframework:spring-context'
-    runtime 'org.springframework.boot:spring-boot-autoconfigure'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testRuntime 'org.springframework.boot:spring-boot-starter-logging'
+    testRuntime 'org.hsqldb:hsqldb'
 }
