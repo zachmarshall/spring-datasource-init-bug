@@ -1,0 +1,24 @@
+plugins {
+    id "io.spring.dependency-management" version "1.0.2.RELEASE"
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+    jcenter()
+}
+
+dependencyManagement {
+     imports {
+          mavenBom 'org.springframework.boot:spring-boot-starter-parent:1.5.3.RELEASE'
+     }
+}
+
+dependencies {
+    compile 'org.springframework:spring-beans'
+    compile 'org.springframework:spring-context'
+    runtime 'org.springframework.boot:spring-boot-autoconfigure'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
